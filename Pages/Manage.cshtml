@@ -1,0 +1,34 @@
+﻿@page
+@model WebApplication8.Pages.ManageModel
+@{
+}
+<h1> insert new book</h1>
+<form method="post" asp-page-handler="InsertBook">
+    <label asp-for="books.Id">please enter book id</label>
+    <input type="numeric" asp-for="books.Id" />
+    <br></br>
+    <label asp-for="books.BookName">please enter book name</label>
+    <input type="text" asp-for="books.BookName" />
+    <br></br>
+    <label asp-for="books.Author">please enter book author</label>
+    <input type="text" asp-for="books.Author" />
+    <br></br>
+    <label asp-for="books.Category">please enter book category</label>
+    <input type="text" asp-for="books.Category" />
+    <br></br>
+    <input type="submit" />
+</form>
+<br></br>
+<h1> insert new subscriber</h1>
+<form method="post" asp-page-handler="InsertSub">
+    <label asp-for="subscribers.Id">please enter sub id</label>
+    <input type="numeric" asp-for="subscribers.Id" />
+    <br></br>
+    <label asp-for="subscribers.firstName">please enter subs first name</label>
+    <input type="text" asp-for="subscribers.firstName" />
+    <br></br>
+    <label asp-for="subscribers.lastName">please enter subs last name</label>
+    <input type="text" asp-for="subscribers.lastName" />
+    <br></br>
+    <input type="submit" />
+</form>

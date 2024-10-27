@@ -1,0 +1,23 @@
+﻿@page
+@model WebApplication8.Pages.BookActionsModel
+@{
+}
+<h1> Return Book</h1>
+<form method="post" asp-page-handler="ReturnBook">
+    <label asp-for="subscribers.Id">please enter sub id:</label>
+    <input type="numeric" asp-for="subscribers.Id" />
+    <br></br>
+    <label asp-for="books.Id">please enter book id:</label>
+    <input type="numeric" asp-for="books.Id" />
+    <input type="submit" />
+</form>
+<br></br>
+<h1>Loan Book</h1>
+<form method="post" asp-page-handler="LoanBook">
+    <label asp-for="subscribers.Id">please enter sub id:</label>
+    <input type="numeric" asp-for="subscribers.Id" />
+    <br></br>
+    <label asp-for="books.Id">please enter book id:</label>
+    <input type="numeric" asp-for="books.Id" />
+    <input type="submit" />
+</form>

@@ -1,0 +1,13 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Welcome to our Library!<br></br> in the navigation bar in the top you can see our services: <br></br> 
+        manage library(adding new book or subscriber)-<a asp-page="Manage">Manage Library</a><br></br>
+        Loan/Return Books-<a asp-page="BookActions">Loan/Return of Books</a><br></br>
+        Display Information(about a subscriber, about a book, about a genre)-<a asp-page="Display">Display Information</a></p>
+</div>

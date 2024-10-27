@@ -1,0 +1,60 @@
+﻿@page
+@using WebApplication8.Pages.Models;
+@model WebApplication8.Pages.DisplayModel
+@{
+}
+<style>
+    th, td {
+        padding: 10px;
+        border: 1px solid black;
+    }
+</style>
+<h1> Display Information</h1>
+<br></br>
+<h2>Subscribers</h2>
+<table>
+    <thead>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Book Ids</th>
+    </thead>
+    <tbody>
+        @foreach(Subscribers sub in Model.subscribers)
+        {
+            <tr>
+                <td>@sub.Id</td>
+                <td>@sub.firstName</td>
+                <td>@sub.lastName</td>
+                <td>
+                    @foreach (var bookId in sub.booksId)
+                    {
+                        @bookId
+                        @:, 
+                    }
+                    </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br></br>
+<h2>Books</h2>
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Author Name</th>
+        <th>Genre</th>
+    </thead>
+    <tbody>
+        @foreach(Books book in Model.books)
+        {
+            <tr>
+                <td>@book.Id</td>
+                <td>@book.BookName</td>
+                <td>@book.Author</td>
+                <td>@book.Category</td>
+            </tr>
+        }
+    </tbody>
+</table>
